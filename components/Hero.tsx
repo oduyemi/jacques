@@ -126,26 +126,26 @@ export const Hero = () => {
             </div>
 
             {/* CTA */}
-            <div className="mt-2 flex flex-wrap gap-4">
-            <EarlyAccessDialog>
-  <Button
-    size="lg"
-    className="h-14 rounded-full bg-amber-500 px-8 text-black hover:bg-amber-400"
-  >
-    Request Early Access
-    <ArrowRight className="ml-2 h-4 w-4" />
-  </Button>
-</EarlyAccessDialog>
+            <div className="mt-2 flex flex-wrap gap-4 mt-3">
+                <EarlyAccessDialog>
+                    <Button
+                        size="lg"
+                        className="h-14 rounded-full bg-amber-500 px-8 text-black hover:bg-amber-400"
+                    >
+                        Request Early Access
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                    </EarlyAccessDialog>
 
-<ScheduleConversationDialog>
-  <Button
-    variant="outline"
-    size="lg"
-    className="h-14 rounded-full border-white/15 bg-white/[0.03] text-white"
-  >
-    Schedule a Conversation
-  </Button>
-</ScheduleConversationDialog>
+                    <ScheduleConversationDialog>
+                    <Button
+                        variant="outline"
+                        size="lg"
+                        className="h-14 rounded-full border-white/15 bg-white/[0.03] text-white"
+                    >
+                        Schedule a Conversation
+                    </Button>
+                    </ScheduleConversationDialog>
             </div>
           </motion.div>
 
@@ -231,38 +231,6 @@ export const Hero = () => {
   );
 }
 
-function Metric({
-  icon,
-  title,
-  subtitle,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  subtitle: string;
-}) {
-  return (
-    <div
-      className="
-      rounded-2xl
-      border
-      border-white/10
-      bg-white/[0.02]
-      p-4
-      backdrop-blur-xl
-    "
-    >
-      <div className="mb-3 text-amber-400">{icon}</div>
-
-      <div className="font-semibold text-white">
-        {title}
-      </div>
-
-      <div className="text-sm text-zinc-500">
-        {subtitle}
-      </div>
-    </div>
-  );
-}
 
 function TradeRoute() {
   return (

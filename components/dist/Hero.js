@@ -35,7 +35,7 @@ exports.Hero = function () {
                             React.createElement("p", null, "B2B Market Development"),
                             React.createElement("p", null, "Food & Beverage Expansion"),
                             React.createElement("p", null, "Cross-Border Commercial Growth"))),
-                    React.createElement("div", { className: "mt-2 flex flex-wrap gap-4" },
+                    React.createElement("div", { className: "mt-2 flex flex-wrap gap-4 mt-3" },
                         React.createElement(early_access_1.EarlyAccessDialog, null,
                             React.createElement(button_1.Button, { size: "lg", className: "h-14 rounded-full bg-amber-500 px-8 text-black hover:bg-amber-400" },
                                 "Request Early Access",
@@ -61,13 +61,6 @@ exports.Hero = function () {
             React.createElement(early_access_1.EarlyAccessDialog, null),
             React.createElement(schedule_conversation_1.ScheduleConversationDialog, null))));
 };
-function Metric(_a) {
-    var icon = _a.icon, title = _a.title, subtitle = _a.subtitle;
-    return (React.createElement("div", { className: "\r\n      rounded-2xl\r\n      border\r\n      border-white/10\r\n      bg-white/[0.02]\r\n      p-4\r\n      backdrop-blur-xl\r\n    " },
-        React.createElement("div", { className: "mb-3 text-amber-400" }, icon),
-        React.createElement("div", { className: "font-semibold text-white" }, title),
-        React.createElement("div", { className: "text-sm text-zinc-500" }, subtitle)));
-}
 function TradeRoute() {
     return (React.createElement("div", { className: "\r\n      pointer-events-none\r\n      absolute\r\n      -left-24\r\n      top-20\r\n      z-10\r\n      hidden\r\n      lg:block\r\n    " },
         React.createElement("svg", { width: "500", height: "300" },

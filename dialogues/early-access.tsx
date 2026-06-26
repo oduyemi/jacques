@@ -10,131 +10,247 @@ import { ArrowRight } from "lucide-react";
 
 export const EarlyAccessDialog = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
           size="lg"
           className="
-          h-14
-          rounded-full
-          bg-amber-500
-          px-8
-          text-black
-          hover:bg-amber-400
-        "
+            h-14
+            rounded-full
+            bg-amber-500
+            px-8
+            text-black
+            hover:bg-amber-400
+          "
         >
           Request Early Access
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-2xl border-white/10 bg-black text-white">
+      <DialogContent
+        className="
+          max-w-2xl
+          border
+          border-white/10
+          bg-black/95
+          text-white
+          backdrop-blur-xl
+          shadow-[0_0_80px_rgba(245,158,11,0.08)]
+        "
+      >
         <DialogHeader>
-          <DialogTitle className="text-2xl">
+          <DialogTitle className="text-2xl font-semibold">
             Request Early Access
           </DialogTitle>
 
           <DialogDescription className="text-zinc-400">
-            Be among the first to receive updates,
-            insights and launch announcements.
+            Be among the first to receive updates, insights,
+            strategic content, and launch announcements.
           </DialogDescription>
         </DialogHeader>
 
-        <form className="space-y-5 pt-4">
+        <form className="space-y-6 pt-6">
           <div className="grid gap-4 md:grid-cols-2">
-            <Input placeholder="First Name" />
+            <Input
+              placeholder="First Name"
+              className="
+                h-12
+                border-white/10
+                bg-zinc-900/80
+                text-white
+                placeholder:text-zinc-500
+                focus-visible:border-amber-500/50
+                focus-visible:ring-amber-500/20
+              "
+            />
 
-            <Input placeholder="Last Name" />
+            <Input
+              placeholder="Last Name"
+              className="
+                h-12
+                border-white/10
+                bg-zinc-900/80
+                text-white
+                placeholder:text-zinc-500
+                focus-visible:border-amber-500/50
+                focus-visible:ring-amber-500/20
+              "
+            />
           </div>
 
-          <Input placeholder="Company" />
+          <Input
+            placeholder="Company"
+            className="
+              h-12
+              border-white/10
+              bg-zinc-900/80
+              text-white
+              placeholder:text-zinc-500
+              focus-visible:border-amber-500/50
+              focus-visible:ring-amber-500/20
+            "
+          />
 
-          <Input placeholder="Role / Position" />
+          <Input
+            placeholder="Role / Position"
+            className="
+              h-12
+              border-white/10
+              bg-zinc-900/80
+              text-white
+              placeholder:text-zinc-500
+              focus-visible:border-amber-500/50
+              focus-visible:ring-amber-500/20
+            "
+          />
 
           <Input
             type="email"
             placeholder="Business Email"
+            className="
+              h-12
+              border-white/10
+              bg-zinc-900/80
+              text-white
+              placeholder:text-zinc-500
+              focus-visible:border-amber-500/50
+              focus-visible:ring-amber-500/20
+            "
           />
 
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Market of Interest" />
-            </SelectTrigger>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Select>
+              <SelectTrigger
+                className="
+                  h-12
+                  border-white/10
+                  bg-zinc-900/80
+                  text-white
+                  hover:border-amber-500/30
+                "
+              >
+                <SelectValue placeholder="Market of Interest" />
+              </SelectTrigger>
 
-            <SelectContent>
-              <SelectItem value="usa">
-                United States
-              </SelectItem>
+              <SelectContent
+                position="popper"
+                sideOffset={8}
+                className="
+                  z-[100]
+                  max-h-60
+                  overflow-y-auto
+                  border-white/10
+                  bg-zinc-950
+                  text-white
+                "
+              >
+                <SelectItem value="usa">
+                  United States
+                </SelectItem>
 
-              <SelectItem value="canada">
-                Canada
-              </SelectItem>
+                <SelectItem value="canada">
+                  Canada
+                </SelectItem>
 
-              <SelectItem value="north-america">
-                North America
-              </SelectItem>
+                <SelectItem value="north-america">
+                  North America
+                </SelectItem>
 
-              <SelectItem value="europe">
-                Europe
-              </SelectItem>
+                <SelectItem value="europe">
+                  Europe
+                </SelectItem>
 
-              <SelectItem value="other">
-                Other
-              </SelectItem>
-            </SelectContent>
-          </Select>
+                <SelectItem value="other">
+                  Other
+                </SelectItem>
+              </SelectContent>
+            </Select>
 
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Primary Interest" />
-            </SelectTrigger>
+            <Select>
+              <SelectTrigger
+                className="
+                  h-12
+                  border-white/10
+                  bg-zinc-900/80
+                  text-white
+                  hover:border-amber-500/30
+                "
+              >
+                <SelectValue placeholder="Primary Interest" />
+              </SelectTrigger>
 
-            <SelectContent>
-              <SelectItem value="market-entry">
-                Market Entry Strategy
-              </SelectItem>
+              <SelectContent
+                position="popper"
+                sideOffset={8}
+                className="
+                  z-[100]
+                  max-h-60
+                  overflow-y-auto
+                  border-white/10
+                  bg-zinc-950
+                  text-white
+                "
+              >
+                <SelectItem value="market-entry">
+                  Market Entry Strategy
+                </SelectItem>
 
-              <SelectItem value="b2b">
-                B2B Development
-              </SelectItem>
+                <SelectItem value="b2b">
+                  B2B Development
+                </SelectItem>
 
-              <SelectItem value="trade">
-                Trade Partnerships
-              </SelectItem>
+                <SelectItem value="trade">
+                  Trade Partnerships
+                </SelectItem>
 
-              <SelectItem value="expansion">
-                Brand Expansion
-              </SelectItem>
+                <SelectItem value="expansion">
+                  Brand Expansion
+                </SelectItem>
 
-              <SelectItem value="distribution">
-                Distribution Networks
-              </SelectItem>
-            </SelectContent>
-          </Select>
+                <SelectItem value="distribution">
+                  Distribution Networks
+                </SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
           <Textarea
-            rows={4}
+            rows={5}
             placeholder="Message (Optional)"
+            className="
+              min-h-[140px]
+              border-white/10
+              bg-zinc-900/80
+              text-white
+              placeholder:text-zinc-500
+              focus-visible:border-amber-500/50
+              focus-visible:ring-amber-500/20
+            "
           />
 
           <Button
             className="
-            w-full
-            bg-amber-500
-            text-black
-            hover:bg-amber-400
-          "
+              h-12
+              w-full
+              bg-amber-500
+              font-medium
+              text-black
+              transition-all
+              hover:bg-amber-400
+            "
           >
             Request Access
           </Button>
 
-          <p className="text-xs text-zinc-500">
-            All inquiries are reviewed personally
-            and treated with complete confidentiality.
+          <p className="text-center text-xs leading-relaxed text-zinc-500">
+            All inquiries are reviewed personally and treated with
+            complete confidentiality.
           </p>
         </form>
       </DialogContent>
     </Dialog>
   );
-}
+};
