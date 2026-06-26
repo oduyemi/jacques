@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,28 +8,19 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight } from "lucide-react";
 
 
-export const EarlyAccessDialog = () => {
-  const [open, setOpen] = useState(false);
+interface EarlyAccessDialogProps {
+  children: ReactNode;
+}
 
+
+
+export const EarlyAccessDialog = ({children}: EarlyAccessDialogProps) => {
+  const [open, setOpen] = useState(false);
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button
-          size="lg"
-          className="
-            h-14
-            rounded-full
-            bg-amber-500
-            px-8
-            text-black
-            hover:bg-amber-400
-          "
-        >
-          Request Early Access
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        {children}
       </DialogTrigger>
-
       <DialogContent
         className="
           max-w-2xl

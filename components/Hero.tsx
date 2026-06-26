@@ -126,26 +126,26 @@ export const Hero = () => {
             </div>
 
             {/* CTA */}
-            <div className="mt-2 flex flex-wrap gap-4 mt-3">
-                <EarlyAccessDialog>
-                    <Button
-                        size="lg"
-                        className="h-14 rounded-full bg-amber-500 px-8 text-black hover:bg-amber-400"
-                    >
-                        Request Early Access
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                    </EarlyAccessDialog>
+            <div className="mt-3 flex flex-wrap gap-4">
+              <EarlyAccessDialog>
+                <Button
+                  size="lg"
+                  className="h-14 rounded-full bg-amber-500 px-8 text-black hover:bg-amber-400"
+                >
+                  Request Early Access
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </EarlyAccessDialog>
 
-                    <ScheduleConversationDialog>
-                    <Button
-                        variant="outline"
-                        size="lg"
-                        className="h-14 rounded-full border-white/15 bg-white/[0.03] text-white"
-                    >
-                        Schedule a Conversation
-                    </Button>
-                    </ScheduleConversationDialog>
+              <ScheduleConversationDialog>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="h-14 rounded-full border-white/15 bg-white/[0.03] text-white hover:bg-white/10"
+                >
+                  Schedule a Conversation
+                </Button>
+              </ScheduleConversationDialog>
             </div>
           </motion.div>
 
@@ -223,10 +223,6 @@ export const Hero = () => {
           </motion.div>
         </div>
       </div>
-      <div className="mt-10 flex flex-wrap gap-4">
-        <EarlyAccessDialog />
-        <ScheduleConversationDialog />
-    </div>
     </section>
   );
 }

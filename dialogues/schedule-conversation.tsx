@@ -1,4 +1,5 @@
 "use client";
+import { ReactNode } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,28 +8,18 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 
 
+interface ScheduleConversationDialogProps {
+  children: ReactNode;
+}
 
-export const ScheduleConversationDialog = () => {
+
+
+export const ScheduleConversationDialog = ({children}: ScheduleConversationDialogProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          size="lg"
-          className="
-            h-14
-            rounded-full
-            border-white/15
-            bg-white/[0.03]
-            text-white
-            hover:bg-white/10
-            hover:text-white
-          "
-        >
-          Schedule A Conversation
-        </Button>
+        {children}
       </DialogTrigger>
-
       <DialogContent
         className="
           max-w-3xl
