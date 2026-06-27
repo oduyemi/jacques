@@ -74,7 +74,7 @@ export const Hero = () => {
                 COMING SOON
               </span>
             </div>
-            <p className="mb-12 text-sm uppercase tracking-[0.35em] text-zinc-500">
+            <p className="mb-8 text-sm uppercase tracking-[0.35em] text-zinc-500">
               Jacques Epangue
             </p>
             <h1
