@@ -96,7 +96,7 @@ export const Hero = () => {
               className="
               mt-6
               max-w-2xl
-              text-md
+              text-lg
               leading-relaxed
               text-zinc-400
             "
