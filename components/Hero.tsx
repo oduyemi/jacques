@@ -44,7 +44,7 @@ export const Hero = () => {
         JACQUES
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-20 pt-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-20">
         <div className="grid w-full gap-16 lg:grid-cols-2">
           {/* LEFT */}
           <motion.div
@@ -56,7 +56,7 @@ export const Hero = () => {
             {/* Badge */}
             <div
               className="
-              mb-8
+              mb-6
               inline-flex
               w-fit
               items-center
@@ -74,7 +74,7 @@ export const Hero = () => {
                 COMING SOON
               </span>
             </div>
-            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-zinc-500">
+            <p className="mb-12 text-sm uppercase tracking-[0.35em] text-zinc-500">
               Jacques Epangue
             </p>
             <h1
@@ -94,7 +94,7 @@ export const Hero = () => {
             </h1>
             <p
               className="
-              mt-4
+              mt-6
               max-w-2xl
               text-md
               leading-relaxed
@@ -111,7 +111,7 @@ export const Hero = () => {
             {/* Expertise */}
             <div
               className="
-              mt-4
+              mt-6
               border-l-2
               border-amber-400
               pl-6
@@ -126,7 +126,7 @@ export const Hero = () => {
             </div>
 
             {/* CTA */}
-            <div className="mt-3 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
               <EarlyAccessDialog>
                 <Button
                   size="lg"
